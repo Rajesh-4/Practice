@@ -35,3 +35,23 @@ const users=[
 // console.log(user1)
 const[{username},{userid}]=users
 console.log(username,userid)
+
+
+
+// 1. Write a JavaScript program to list the properties of a JavaScript object. Go to the editor
+// Sample object:
+// var student = {
+// name : "David Rayy",
+// sclass : "VI",
+// rollno : 12 };
+// Sample Output: name,sclass,rollno
+let a=[]
+var student = {
+    name : "David Rayy",
+    sclass : "VI",
+    rollno : 12 };
+    for(k in student){
+    console.log(k)
+    a.push(k)
+    }
+    console.log(a)
