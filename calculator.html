@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Calculator</title>
+  <style>   
+        div{
+            margin: 3px;
+        }
+        span{
+            font-style: italic;
+            color: brown;
+
+        }
+</style>
+</head>
+<body>
+    <div>Credit Rating: <input type="number" value="" id="Credit"></div>
+    <div>Loan Request Amount:<input type="number" value="" id="loan"></div>
+    <div>% Of Elisibility:<input type="number" value="" id="elisible"></div>
+    <div><input type="submit" value="Calculate" onclick="return myCal()"></div>
+    <div><h1>Result is :<Span id="result"></Span></h1></div>
+
+
+
+    <script>    
+        function myCal(){
+            let Amount=document.getElementById('loan').value;
+            let Elisibility=document.getElementById('elisible').value;
+            let Final=(Amount*Elisibility)/100;
+          document.getElementById('result').innerHTML=JSON.stringify(Final);
+        }
+        
+    </script>
+</body>
+</html>
